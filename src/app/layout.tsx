@@ -5,7 +5,10 @@ import AuthHydrator from "@/components/AuthHydrator/AuthHydrator";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Interview Builder — Конструктор интервью",
+  title: {
+    default: "Interview Checker",
+    template: "Interview Checker | %s",
+  },
   description: "Подготовка к техническим собеседованиям",
 };
 
