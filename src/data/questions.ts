@@ -45,7 +45,7 @@ const LEVEL_ORDER: Record<Level, number> = {
 };
 
 export const QUESTIONS: Question[] = [
-  // ——— Frontend (50) ———
+  // ——— Frontend (51) ———
   {
     id: "fe1",
     text: "Что такое Virtual DOM в React?",
