@@ -581,6 +581,22 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: "fe35",
+    text: "В чём разница между type и interface?",
+    options: [
+      "interface можно расширять и повторно объявлять с объединением свойств, а type позволяет описывать не только объекты, но и объединения, примитивы и кортежи",
+      "type используется только для классов, а interface — только для функций",
+      "interface существует во время выполнения программы, а type — только при компиляции",
+      "Между ними нет никаких различий",
+    ],
+    correctIndex: 0,
+    category: "Основы",
+    role: "frontend",
+    level: "middle",
+    technologies: ["typescript"],
+    explanation: "Главное отличие: interface удобнее для объектов и расширения API; type — когда нужны union, примитивы или нестандартные типы. В простых случаях с объектами они часто взаимозаменяемы.",
+  },
+  {
+    id: "fe36",
     text: "Для чего нужен next/image?",
     options: [
       "Оптимизация изображений: размеры, lazy-load, современные форматы",
@@ -596,7 +612,7 @@ export const QUESTIONS: Question[] = [
     explanation: "Компонент Image упрощает оптимизацию и адаптивную отдачу картинок.",
   },
   {
-    id: "fe36",
+    id: "fe37",
     text: "Что такое debounce?",
     options: [
       "Откладывание вызова функции до паузы во входных событиях",
@@ -612,7 +628,7 @@ export const QUESTIONS: Question[] = [
     explanation: "Debounce полезен для поиска и resize, чтобы не спамить обработчик.",
   },
   {
-    id: "fe37",
+    id: "fe38",
     text: "Чем Client Component помечается в Next.js App Router?",
     options: [
       "Директивой \"use client\" в начале файла",
@@ -628,7 +644,7 @@ export const QUESTIONS: Question[] = [
     explanation: "\"use client\" переводит модуль и его зависимости в клиентский бандл.",
   },
   {
-    id: "fe38",
+    id: "fe39",
     text: "Что такое Zod или аналогичная runtime-валидация на фронте?",
     options: [
       "Проверка формы данных во время выполнения с выводом типов",
@@ -644,7 +660,7 @@ export const QUESTIONS: Question[] = [
     explanation: "Схемы валидируют API/формы и могут выводить TypeScript-типы.",
   },
   {
-    id: "fe39",
+    id: "fe40",
     text: "Зачем нужен React.memo?",
     options: [
       "Пропускать ре-рендер, если props поверхностно не изменились",
@@ -660,7 +676,7 @@ export const QUESTIONS: Question[] = [
     explanation: "memo сравнивает props и может избежать лишнего рендера компонента.",
   },
   {
-    id: "fe40",
+    id: "fe41",
     text: "Что делает Promise.all?",
     options: [
       "Ждёт завершения всех промисов; падает при первой ошибке",
@@ -678,7 +694,7 @@ export const QUESTIONS: Question[] = [
 
   // ——— Frontend Senior (+10) ———
   {
-    id: "fe41",
+    id: "fe42",
     text: "Что такое layout thrashing в браузере?",
     options: [
       "Частые принудительные синхронные перерасчёты layout из-за чтения/записи DOM",
@@ -694,7 +710,7 @@ export const QUESTIONS: Question[] = [
     explanation: "Чередование измерений и изменений DOM вызывает дорогостоящие reflow.",
   },
   {
-    id: "fe42",
+    id: "fe43",
     text: "Как Concurrent Features в React помогают UX?",
     options: [
       "Позволяют прерывать/приоритизировать обновления UI",
@@ -710,7 +726,7 @@ export const QUESTIONS: Question[] = [
     explanation: "startTransition и схожие API делают интерфейс отзывчивее при тяжёлых обновлениях.",
   },
   {
-    id: "fe43",
+    id: "fe44",
     text: "Что такое CSRF и как фронт/бэк обычно защищаются?",
     options: [
       "Подделка запроса от имени пользователя; SameSite cookies, CSRF-токены",
@@ -726,7 +742,7 @@ export const QUESTIONS: Question[] = [
     explanation: "CSRF использует доверие браузера к cookie; токены и SameSite снижают риск.",
   },
   {
-    id: "fe44",
+    id: "fe45",
     text: "Зачем нужен compound components pattern?",
     options: [
       "Гибкий API из связанных компонентов через общий неявный контекст",
@@ -742,7 +758,7 @@ export const QUESTIONS: Question[] = [
     explanation: "Например Tabs.List / Tabs.Panel разделяют UI, сохраняя связность состояния.",
   },
   {
-    id: "fe45",
+    id: "fe46",
     text: "Что важно при выборе стратегии кэширования в Next.js?",
     options: [
       "Понимать static/dynamic rendering, revalidate и свежесть данных",
@@ -758,7 +774,7 @@ export const QUESTIONS: Question[] = [
     explanation: "Неверный кэш даёт устаревшие данные или лишнюю нагрузку на origin.",
   },
   {
-    id: "fe46",
+    id: "fe47",
     text: "Что такое bundle analysis и зачем он senior-разработчику?",
     options: [
       "Анализ состава бандла для поиска тяжёлых зависимостей",
@@ -774,7 +790,7 @@ export const QUESTIONS: Question[] = [
     explanation: "Инструменты вроде webpack-bundle-analyzer помогают уменьшить First Load JS.",
   },
   {
-    id: "fe47",
+    id: "fe48",
     text: "Как правильно типизировать generic-компонент в React + TypeScript?",
     options: [
       "Объявить компонент как generic-функцию с параметром типа для props",
@@ -790,7 +806,7 @@ export const QUESTIONS: Question[] = [
     explanation: "Generic props сохраняют связь между полями, например items и renderItem.",
   },
   {
-    id: "fe48",
+    id: "fe49",
     text: "Что такое CLS в Core Web Vitals?",
     options: [
       "Cumulative Layout Shift — визуальная стабильность при загрузке",
@@ -806,7 +822,7 @@ export const QUESTIONS: Question[] = [
     explanation: "Высокий CLS ухудшает UX из-за скачков контента.",
   },
   {
-    id: "fe49",
+    id: "fe50",
     text: "Почему опасен dangerouslySetInnerHTML?",
     options: [
       "Может привести к XSS при вставке небезопасного HTML",
@@ -822,7 +838,7 @@ export const QUESTIONS: Question[] = [
     explanation: "Без санитизации пользовательский HTML исполняет скрипты в странице.",
   },
   {
-    id: "fe50",
+    id: "fe51",
     text: "Что такое island architecture / partial hydration по смыслу?",
     options: [
       "Гидратировать только интерактивные островки, остальной HTML статичен",
