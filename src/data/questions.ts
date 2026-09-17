@@ -975,6 +975,161 @@ export const QUESTIONS: Question[] = [
     explanation:
       "Для создания ресурса REST API обычно используют POST-запрос. В fetch данные передают через body: JSON.stringify(data) и задают заголовок Content-Type: application/json.",
   },
+  {
+    id: "fe59",
+    text: "Что вернёт выражение typeof null в JavaScript?",
+    options: ["\"object\"", "\"null\"", "\"undefined\"", "\"number\""],
+    correctIndex: 0,
+    category: "Основы",
+    role: "frontend",
+    level: "junior",
+    technologies: ["javascript"],
+    explanation:
+      "typeof null возвращает \"object\" — это историческая особенность JavaScript. Для проверки на null используют строгое сравнение value === null.",
+  },
+  {
+    id: "fe60",
+    text: "Для чего в React используют хук useState?",
+    options: [
+      "Для хранения состояния компонента и запуска повторного рендера при его обновлении",
+      "Для прямого изменения DOM",
+      "Для создания серверного маршрута",
+      "Для подключения CSS-файла",
+    ],
+    correctIndex: 0,
+    category: "Основы",
+    role: "frontend",
+    level: "junior",
+    technologies: ["react"],
+    explanation:
+      "useState возвращает текущее значение состояния и функцию для его обновления. Обновление состояния запускает повторный рендер компонента.",
+  },
+  {
+    id: "fe61",
+    text: "Какой метод массива возвращает первый элемент, удовлетворяющий условию?",
+    options: ["filter", "map", "find", "forEach"],
+    correctIndex: 2,
+    category: "Основы",
+    role: "frontend",
+    level: "junior",
+    technologies: ["javascript"],
+    explanation:
+      "Метод find возвращает первый подходящий элемент или undefined, если такой элемент не найден.",
+  },
+  {
+    id: "fe62",
+    text: "Что означает знак вопроса после имени свойства в интерфейсе TypeScript?",
+    options: [
+      "Свойство доступно только для чтения",
+      "Свойство является необязательным",
+      "Свойство всегда равно null",
+      "Свойство нельзя удалить",
+    ],
+    correctIndex: 1,
+    category: "Основы",
+    role: "frontend",
+    level: "junior",
+    technologies: ["typescript"],
+    explanation:
+      "Знак вопроса помечает свойство как необязательное: объект может быть создан без этого свойства.",
+  },
+  {
+    id: "fe63",
+    text: "Почему нельзя напрямую изменять state в React?",
+    options: [
+      "React может не обнаружить изменение и не выполнить корректный повторный рендер",
+      "State доступен только на сервере",
+      "Прямое изменение всегда удаляет компонент",
+      "JavaScript запрещает изменять объекты",
+    ],
+    correctIndex: 0,
+    category: "Паттерны",
+    role: "frontend",
+    level: "junior",
+    technologies: ["react"],
+    explanation:
+      "Состояние обновляют через setter-функцию. Это сообщает React об изменении и позволяет корректно запланировать повторный рендер.",
+  },
+  {
+    id: "fe64",
+    text: "Что делает оператор spread (...) при работе с массивом?",
+    options: [
+      "Удаляет повторяющиеся элементы",
+      "Разворачивает элементы массива в новое выражение",
+      "Сортирует массив",
+      "Преобразует массив в строку",
+    ],
+    correctIndex: 1,
+    category: "Основы",
+    role: "frontend",
+    level: "junior",
+    technologies: ["javascript"],
+    explanation:
+      "Spread разворачивает элементы массива. Например, [...first, ...second] создаёт новый массив из элементов двух массивов.",
+  },
+  {
+    id: "fe65",
+    text: "Для чего в асинхронной функции используют await?",
+    options: [
+      "Чтобы дождаться результата Promise внутри async-функции",
+      "Чтобы отменить Promise",
+      "Чтобы сделать функцию синхронной для всего приложения",
+      "Чтобы повторять запрос до успеха",
+    ],
+    correctIndex: 0,
+    category: "Основы",
+    role: "frontend",
+    level: "junior",
+    technologies: ["javascript", "typescript"],
+    explanation:
+      "await приостанавливает выполнение текущей async-функции до завершения Promise, не блокируя основной поток JavaScript.",
+  },
+  {
+    id: "fe66",
+    text: "Что произойдёт при вызове setState-функции React с тем же примитивным значением?",
+    options: [
+      "React обычно пропустит повторный рендер, так как значение не изменилось",
+      "Компонент обязательно размонтируется",
+      "Состояние станет undefined",
+      "React перезагрузит страницу",
+    ],
+    correctIndex: 0,
+    category: "Производительность",
+    role: "frontend",
+    level: "junior",
+    technologies: ["react"],
+    explanation:
+      "React сравнивает новое и предыдущее состояние с помощью Object.is и обычно пропускает обновление, если значения равны.",
+  },
+  {
+    id: "fe67",
+    text: "Какой HTTP-статус обычно означает успешное выполнение запроса?",
+    options: ["200", "301", "404", "500"],
+    correctIndex: 0,
+    category: "Основы",
+    role: "frontend",
+    level: "junior",
+    technologies: ["javascript"],
+    explanation:
+      "Статус 200 OK означает, что сервер успешно обработал запрос. Другие успешные ответы также находятся в диапазоне 2xx.",
+  },
+  {
+    id: "fe68",
+    text: "Для чего используется optional chaining (?.) в JavaScript?",
+    options: [
+      "Для безопасного доступа к свойству, если промежуточное значение может быть null или undefined",
+      "Для обязательной проверки типа во время компиляции",
+      "Для копирования объекта",
+      "Для создания Promise",
+    ],
+    correctIndex: 0,
+    category: "Основы",
+    role: "frontend",
+    level: "junior",
+    technologies: ["javascript", "typescript"],
+    explanation:
+      "Optional chaining прекращает вычисление и возвращает undefined, если значение слева равно null или undefined.",
+  },
 
   // ——— Backend (20) ———
   {
