@@ -1130,6 +1130,171 @@ export const QUESTIONS: Question[] = [
     explanation:
       "Optional chaining прекращает вычисление и возвращает undefined, если значение слева равно null или undefined.",
   },
+  {
+    id: "fe69",
+    text: "Когда TypeScript проверяет типы программы?",
+    options: [
+      "Во время компиляции, до выполнения JavaScript",
+      "Только после открытия страницы в браузере",
+      "Только при выполнении HTTP-запроса",
+      "Во время обработки CSS",
+    ],
+    correctIndex: 0,
+    category: "Основы",
+    role: "frontend",
+    level: "junior",
+    technologies: ["typescript"],
+    explanation:
+      "TypeScript выполняет статическую проверку типов до запуска программы, а результат компиляции исполняется как обычный JavaScript.",
+  },
+  {
+    id: "fe70",
+    text: "Что такое union type в TypeScript?",
+    options: [
+      "Тип, позволяющий значению соответствовать одному из нескольких типов",
+      "Тип, который всегда содержит массив",
+      "Способ объединить два файла",
+      "Тип только для асинхронных функций",
+    ],
+    correctIndex: 0,
+    category: "Основы",
+    role: "frontend",
+    level: "junior",
+    technologies: ["typescript"],
+    explanation:
+      "Union type записывают через вертикальную черту, например string | number. Значение может соответствовать любому из перечисленных типов.",
+  },
+  {
+    id: "fe71",
+    text: "Что означает вывод типов (type inference) в TypeScript?",
+    options: [
+      "TypeScript определяет тип значения без явного указания разработчиком",
+      "TypeScript преобразует строку в число во время выполнения",
+      "Браузер автоматически исправляет ошибку типа",
+      "Все переменные получают тип any",
+    ],
+    correctIndex: 0,
+    category: "Основы",
+    role: "frontend",
+    level: "junior",
+    technologies: ["typescript"],
+    explanation:
+      "TypeScript часто выводит тип из присвоенного значения или контекста, поэтому тип не всегда нужно указывать явно.",
+  },
+  {
+    id: "fe72",
+    text: "Чем unknown безопаснее any в TypeScript?",
+    options: [
+      "Перед использованием unknown нужно проверить и сузить его тип",
+      "unknown разрешает вызывать любые методы без проверки",
+      "unknown существует только во время выполнения",
+      "unknown автоматически преобразуется в string",
+    ],
+    correctIndex: 0,
+    category: "Безопасность",
+    role: "frontend",
+    level: "junior",
+    technologies: ["typescript"],
+    explanation:
+      "Значение unknown нельзя произвольно использовать, пока код не проверит его тип. any отключает большинство таких проверок.",
+  },
+  {
+    id: "fe73",
+    text: "Для чего в TypeScript используется модификатор readonly?",
+    options: [
+      "Чтобы запретить переназначение свойства после инициализации",
+      "Чтобы скрыть свойство от браузера",
+      "Чтобы сделать свойство необязательным",
+      "Чтобы удалить свойство при компиляции",
+    ],
+    correctIndex: 0,
+    category: "Основы",
+    role: "frontend",
+    level: "junior",
+    technologies: ["typescript"],
+    explanation:
+      "readonly запрещает изменять свойство средствами TypeScript после его инициализации. Эта проверка действует на этапе компиляции.",
+  },
+  {
+    id: "fe74",
+    text: "Как в Next.js создать страницу для маршрута /about в App Router?",
+    options: [
+      "Создать файл app/about/page.tsx",
+      "Создать файл public/about.tsx",
+      "Добавить маршрут только в package.json",
+      "Создать файл app/about/layout.css",
+    ],
+    correctIndex: 0,
+    category: "Архитектура",
+    role: "frontend",
+    level: "junior",
+    technologies: ["nextjs", "typescript"],
+    explanation:
+      "В App Router маршруты определяются структурой папок, а файл page.tsx делает соответствующий сегмент доступным как страницу.",
+  },
+  {
+    id: "fe75",
+    text: "Для чего нужен компонент Link в Next.js?",
+    options: [
+      "Для навигации между страницами приложения без полной перезагрузки",
+      "Для подключения базы данных",
+      "Для объявления TypeScript-типа",
+      "Для загрузки глобальных CSS-переменных",
+    ],
+    correctIndex: 0,
+    category: "Основы",
+    role: "frontend",
+    level: "junior",
+    technologies: ["nextjs"],
+    explanation:
+      "Компонент Link обеспечивает клиентскую навигацию между маршрутами Next.js и может заранее загружать связанные с ними данные.",
+  },
+  {
+    id: "fe76",
+    text: "Где в Next.js размещают статические файлы, доступные по URL от корня сайта?",
+    options: ["В папке public", "В папке types", "В папке node_modules", "В файле next.config.ts"],
+    correctIndex: 0,
+    category: "Инструменты",
+    role: "frontend",
+    level: "junior",
+    technologies: ["nextjs"],
+    explanation:
+      "Файлы из папки public доступны от корня сайта: например, public/logo.png можно открыть по адресу /logo.png.",
+  },
+  {
+    id: "fe77",
+    text: "Для чего в сегменте App Router используется файл layout.tsx?",
+    options: [
+      "Для общего интерфейса, который сохраняется между вложенными страницами",
+      "Только для хранения переменных окружения",
+      "Для настройки TypeScript-компилятора",
+      "Только для обработки API-запросов",
+    ],
+    correctIndex: 0,
+    category: "Архитектура",
+    role: "frontend",
+    level: "junior",
+    technologies: ["nextjs", "typescript"],
+    explanation:
+      "Layout задаёт общий интерфейс для сегмента и его дочерних маршрутов, например шапку или навигацию.",
+  },
+  {
+    id: "fe78",
+    text: "Как в App Router обозначить динамический сегмент маршрута, например идентификатор товара?",
+    options: [
+      "Создать папку с именем [id]",
+      "Создать папку с именем #id",
+      "Добавить id только в package.json",
+      "Назвать файл page.dynamic.tsx",
+    ],
+    correctIndex: 0,
+    category: "Архитектура",
+    role: "frontend",
+    level: "junior",
+    technologies: ["nextjs", "typescript"],
+    explanation:
+      "Квадратные скобки обозначают динамический сегмент. Например, app/products/[id]/page.tsx обрабатывает маршруты с разными id.",
+  },
 
   // ——— Backend (20) ———
   {
